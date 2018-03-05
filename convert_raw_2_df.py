@@ -54,5 +54,5 @@ Cleaned_DF.drop(['index'], axis= 1, inplace = True)
 Cleaned_DF.to_csv('BTC_Daily.csv', encoding='utf-8', index = False)
 print(Cleaned_DF.head())
 
-Cleaned_DF.price_usd.plot('line',use_index = True,grid= True)
+Cleaned_DF.plot(x='current_time',y= 'price_usd')
 plt.show()
